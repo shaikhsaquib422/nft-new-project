@@ -59,16 +59,18 @@ export default function Marketplace() {
   }, [isConnected]);
 
   return (
-    <div className={styles.container}>
+    <div className='py-28'>
       <Header />
-      <div className={styles.innerContainer}>
-        <div className={styles.content}>
+      <div className='px-8'>
+        <div className=''>
           {isConnected ? (
             <>
               <div className={styles.nftSection}>
-                <h2 className={styles.heading}>NFT Marketplace</h2>
+                <h2 className='text-center text-5xl font-bold mb-20 text-purple-400'>
+                  MARKETPLACE
+                </h2>
                 {items?.length > 0 ? (
-                  <div className={styles.nftGrid}>
+                  <div className='columns-2 md:columns-4 gap-4 space-y-4'>
                     {items?.map((value, index) => (
                       <NFTCard item={value} key={index} />
                     ))}

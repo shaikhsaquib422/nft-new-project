@@ -1,8 +1,10 @@
 .header {
   padding: 20px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #003b46;
+  background-color: transparent;
   padding: 20px 32px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
 }
 
 .container {
@@ -16,7 +18,7 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 32px;
 }
 
 .navLinks {
@@ -24,6 +26,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  gap: 32px;
 }
 
 .navLinks li {
@@ -35,14 +38,15 @@
 }
 
 .link {
-  color: #00cffd;
-  font-weight: 700;
-  font-size: 24px;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
   transition: all 0.3s;
+  opacity: 0.9;
 }
 
 .link:hover {
-  color: #0091bf;
+  opacity: 0.7;
 }
 
 .ctaBtn {
@@ -50,12 +54,12 @@
   font-size: 20px;
   font-weight: 600;
   padding: 8px 16px;
-  border-radius: 5px;
+  border-radius: 100px;
 }
 
 .inactivebtn {
-  background-color: #ff6f61;
-  color: #fff;
+  background-color: white;
+  color: black;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -64,8 +68,8 @@
 }
 
 .activebtn {
-  background-color: #008000;
-  color: #fff;
+  background-color: white;
+  color: black;
   cursor: not-allowed;
   opacity: 0.8;
 }

@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background: linear-gradient(90deg, #00cffd 0%, #b57edc 100%);
+  background: transparent;
+  padding-top: 150px;
 }
 
 .innerContainer {

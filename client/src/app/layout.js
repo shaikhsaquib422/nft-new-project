@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { WalletContextProvider } from "@/context/wallet";
+import React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,9 +12,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <WalletContextProvider>
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          <div className='space-bg fixed top-0 -z-50 w-screen h-screen'>
+            <canvas id='canvas'></canvas>
+          </div>
+          <script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
+          {children}
+        </body>
       </WalletContextProvider>
     </html>
   );

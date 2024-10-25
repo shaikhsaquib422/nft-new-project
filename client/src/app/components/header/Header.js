@@ -3,7 +3,7 @@ import { WalletContext } from "@/context/wallet";
 import { BrowserProvider } from "ethers";
 import Image from "next/image";
 import Link from "next/link";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import styles from "./Header.module.css";
 
 export default function Header() {
@@ -41,28 +41,37 @@ export default function Header() {
     }
   };
 
+  useEffect(() => {
+    connectWallet();
+  }, []);
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <Link href="/">
-            <Image src="/logo.png" width={280} height={44} alt="logo" />
+          <Link href='/'>
+            <h1 className='text-3xl font-bold'>DROPS</h1>
           </Link>
         </div>
         <nav className={styles.nav}>
           <ul className={styles.navLinks}>
             <li>
-              <Link href="/marketplace" className={styles.link}>
+              <Link href='/' className={styles.link}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href='/marketplace' className={styles.link}>
                 MarketPlace
               </Link>
             </li>
             <li>
-              <Link href="/sellNFT" className={styles.link}>
+              <Link href='/sellNFT' className={styles.link}>
                 List
               </Link>
             </li>
             <li>
-              <Link href="/profile" className={styles.link}>
+              <Link href='/profile' className={styles.link}>
                 Profile
               </Link>
             </li>

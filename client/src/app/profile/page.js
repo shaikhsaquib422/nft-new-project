@@ -23,6 +23,7 @@ export default function Profile() {
       MarketplaceJson.abi,
       signer
     );
+    console.log(contract);
 
     let transaction = await contract.getMyNFTs();
 
@@ -45,13 +46,17 @@ export default function Profile() {
       itemsArray.push(item);
       sumPrice += Number(price);
     }
+    console.log(itemsArray, "dfsdf");
+
     return { itemsArray, sumPrice };
   }
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { itemsArray, sumPrice } = await getNFTitems();
+        const stuff = await getNFTitems();
+        console.log(stuff);
+        const { itemsArray, sumPrice } = stuff;
         setItems(itemsArray);
         setTotalPrice(sumPrice);
       } catch (error) {

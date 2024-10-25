@@ -90,6 +90,7 @@ export default function SellNFT() {
       router.push("/");
     } catch (e) {
       alert("Upload error", e);
+      console.log(e);
     }
   }
 
@@ -104,7 +105,7 @@ export default function SellNFT() {
               <div className={styles.FormContent}>
                 <label className={styles.Label}>NFT name</label>
                 <input
-                  type="text"
+                  type='text'
                   className={styles.Input}
                   value={formParams.name}
                   onChange={(e) =>
@@ -115,7 +116,7 @@ export default function SellNFT() {
               <div className={styles.FormContent}>
                 <label className={styles.Label}>NFT description</label>
                 <textarea
-                  type="text"
+                  type='text'
                   className={`${styles.Input} ${styles.TextArea}`}
                   value={formParams.description}
                   onChange={(e) =>
@@ -129,7 +130,7 @@ export default function SellNFT() {
               <div className={styles.FormContent}>
                 <label className={styles.Label}>Price (in Eth)</label>
                 <input
-                  type="number"
+                  type='number'
                   className={styles.Input}
                   value={formParams.price}
                   onChange={(e) =>
@@ -140,7 +141,7 @@ export default function SellNFT() {
               <div className={styles.FormContent}>
                 <label className={styles.Label}>Upload image</label>
                 <input
-                  type="file"
+                  type='file'
                   className={styles.Input}
                   onChange={onFileChange}
                 />
@@ -149,7 +150,7 @@ export default function SellNFT() {
               <div className={styles.msg}>{message}</div>
               <button
                 onClick={listNFT}
-                type="submit"
+                type='submit'
                 className={
                   btn
                     ? `${styles.btn} ${styles.activebtn}`
