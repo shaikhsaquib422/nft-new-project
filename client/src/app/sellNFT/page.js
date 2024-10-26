@@ -172,7 +172,6 @@ export default function SellNFT() {
           </div>
         </div>
       )}
-      <Footer />
     </div>
   );
 }

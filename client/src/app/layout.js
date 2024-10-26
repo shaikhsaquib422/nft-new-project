@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { WalletContextProvider } from "@/context/wallet";
 import React from "react";
+import Footer from "./components/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
           </div>
           <script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
           {children}
+          <Footer />
         </body>
       </WalletContextProvider>
     </html>

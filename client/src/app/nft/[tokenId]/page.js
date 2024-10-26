@@ -91,7 +91,7 @@ export default function NFTPage() {
         {isConnected ? (
           <div className={styles.content}>
             <div className={styles.nftGrid}>
-              <Image src={item?.image} alt="" width={800} height={520} />
+              <Image src={item?.image} alt='' width={800} height={520} />
               <div className={styles.details}>
                 <div className={styles.stats}>
                   <div className={styles.stat}>
@@ -136,7 +136,6 @@ export default function NFTPage() {
           <div className={styles.notConnected}>You are not connected...</div>
         )}
       </div>
-      <Footer />
     </div>
   );
 }

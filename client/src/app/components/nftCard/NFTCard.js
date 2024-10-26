@@ -13,11 +13,11 @@ export default function NFTCard({ item }) {
       : item.description;
 
   return (
-    <div className=' bg-fuchsia-600  border-2'>
+    <div className=' bg-fuchsia-600  border-2 overflow-hidden -z-10'>
       <div className={styles.imageContainer}>
         <Image src={IPFSUrl} alt='' width={500} height={360} />
       </div>
-      <div className={styles.overlay}>
+      <div className='z-10'>
         <Link href={`/nft/${item.tokenId}`} className={styles.text}>
           <strong>{item.name}</strong>
           <p>{limitedDescription}</p>
