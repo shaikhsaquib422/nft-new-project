@@ -70,7 +70,7 @@ export default function Marketplace() {
                   MARKETPLACE
                 </h2>
                 {items?.length > 0 ? (
-                  <div className='columns-2 md:columns-4 gap-4 space-y-4'>
+                  <div className='grid grid-cols-4 gap-16'>
                     {items?.map((value, index) => (
                       <NFTCard item={value} key={index} />
                     ))}
